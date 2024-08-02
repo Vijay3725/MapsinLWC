@@ -1,0 +1,18 @@
+<template>
+    <lightning-card>
+        <div class="slds-p-around_medium">
+            <template lwc:if={mapMarkers}>
+                <lightning-map 
+                  map-markers={mapMarkers}
+                  markers-title={markersTitle}
+                  onmarkerselect={callMarkerHandler}
+                  selected-marker-value={selectedMarker}>
+                </lightning-map>
+            </template>
+            <template lwc:else>
+                <p>No Accounts Found</p>
+            </template>
+           
+        </div>
+    </lightning-card>
+</template>
